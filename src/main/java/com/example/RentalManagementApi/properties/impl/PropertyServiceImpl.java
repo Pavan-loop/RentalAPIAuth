@@ -32,8 +32,7 @@ public class PropertyServiceImpl implements PropertyService {
     public Long addProperty(Property property, String token) {
         var user = getUser(token);
         property.setUser(user);
-        propertyRepo.save(property);
-        return property.getId();
+        return propertyRepo.save(property).getId();
     }
 
     @Override
