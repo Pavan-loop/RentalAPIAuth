@@ -27,12 +27,6 @@ public class PaymentController {
         return new ResponseEntity<>(payments, HttpStatus.OK);
     }
 
-//    @PostMapping("/tenant/{id}")
-//    public ResponseEntity<String> addPayment(@PathVariable Long id, @RequestBody Payment payment){
-//        paymentService.addPayment(id,payment);
-//        return new ResponseEntity<>("Added", HttpStatus.OK);
-//    }
-
     @GetMapping("/sum")
     public ResponseEntity<LastMonthEarning> getSum(){
         return new ResponseEntity<>(paymentService.getTotalAmount(), HttpStatus.OK);

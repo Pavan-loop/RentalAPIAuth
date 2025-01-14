@@ -2,6 +2,7 @@ package com.example.RentalManagementApi.TimeFrame;
 
 import com.example.RentalManagementApi.tenants.Tenant;
 import com.example.RentalManagementApi.tenants.TenantRepo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -41,7 +42,6 @@ public class PayRent {
                 String insert = Integer.toString(reduce);
                 tent.setPeriod(insert);
                 tenantRepo.save(tent);
-                System.out.println(tenants);
             }
         }
     }

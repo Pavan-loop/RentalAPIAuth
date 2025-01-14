@@ -12,7 +12,6 @@ public class RentalManagementApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RentalManagementApiApplication.class, args);
-		System.out.println("Well Then.... The War Begins Now");
 	}
 
 }

@@ -14,7 +14,7 @@ public class AuthenticationController {
     private final AuthenticationService authenticationService;
 
     @PostMapping("/register")
-    public ResponseEntity<?> createUser(
+    public ResponseEntity<String> createUser(
             @RequestBody RegisterRequest request,
             @RequestParam String role
     ) {

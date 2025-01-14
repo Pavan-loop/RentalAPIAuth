@@ -1,6 +1,5 @@
 package com.example.RentalManagementApi.tenants;
 
-import com.example.RentalManagementApi.Payment.Payment;
 import com.example.RentalManagementApi.units.Unit;
 import jakarta.persistence.*;
 import lombok.*;

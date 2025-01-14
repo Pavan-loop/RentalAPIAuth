@@ -10,6 +10,7 @@ import com.example.RentalManagementApi.units.Unit;
 import com.example.RentalManagementApi.units.UnitRepo;
 import com.example.RentalManagementApi.units.UnitService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,6 +18,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class TenantServiceImpl implements TenantService {
     private final TenantRepo tenantRepo;
     private final UnitRepo unitRepo;
@@ -66,7 +68,7 @@ public class TenantServiceImpl implements TenantService {
         try {
             tenantRepo.deletePTenant(id);
         }catch (Exception e){
-            System.out.println(e.getMessage());
+            log.error(e.getMessage());
         }
     }
 

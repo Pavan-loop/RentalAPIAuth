@@ -1,6 +1,5 @@
 package com.example.RentalManagementApi.tenants;
 
-import com.example.RentalManagementApi.errorHandling.ParentHaveChildException;
 import com.example.RentalManagementApi.tenants.impl.TenantServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -50,7 +49,6 @@ public class TenantController {
             tenantService.deletePTenant(id);
             return new ResponseEntity<>("Deleted", HttpStatus.OK);
         }catch (Exception e){
-            System.out.println(e.getMessage());
             return new ResponseEntity<>("Problem",HttpStatus.INTERNAL_SERVER_ERROR);
 
         }
